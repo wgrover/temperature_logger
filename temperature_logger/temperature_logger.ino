@@ -12,12 +12,11 @@ int thermoCLK = 6;
 MAX6675 thermocouple(thermoCLK, thermoCS, thermoDO);
 
 void setup() {
-  Serial.begin(9600);
-  Serial.println("MAX6675 test");
+  Serial.begin(115200);
   delay(500);  // wait for MAX chip to stabilize
 }
 
 void loop() {  
-  Serial.println(thermocouple.readCelsius());
+  Serial.println("X" + String(thermocouple.readCelsius()) + "Y");
   delay(1000);    //  must delay AT LEAST 250ms between reads!
 }
