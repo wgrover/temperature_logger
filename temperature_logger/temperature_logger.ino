@@ -13,6 +13,8 @@ MAX6675 thermocouple(thermoCLK, thermoCS, thermoDO);
 
 void setup() {
   Serial.begin(115200);
+  pinMode(13, OUTPUT);
+  digitalWrite(13, LOW);
   delay(500);  // wait for MAX chip to stabilize
 }
 
