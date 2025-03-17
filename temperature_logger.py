@@ -22,6 +22,5 @@ while True:
         print(ser.inWaiting(), datetime.datetime.now().isoformat(), end="\t")
         outfile.write(datetime.datetime.now().isoformat())
         measurement = float(s[1:-3])
-        print("%0.2f\t" % (measurement))
-        outfile.write("," + str("%0.2f" % measurement))
-        outfile.write("\n")
+        print("%0.2f\t" % measurement)
+        outfile.write("," + str("%0.2f" % measurement) + "\n")
