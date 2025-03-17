@@ -4,9 +4,6 @@ port = ""
 usb_count = 0
 devices = os.listdir("/dev")
 for device in devices:
-    # if "cu.usbserial" in device:  <-- original
-    # Recent versions of MacOS seem to use cu.usbmodem
-    # so this version will catch both:
     if "cu.usb" in device:
         port = device
         usb_count += 1
@@ -29,5 +26,3 @@ while True:
         outfile.write("," + str("%0.2f" % measurement))
         print()
         outfile.write("\n")
-        # outfile.flush()
-        # os.fsync(outfile)

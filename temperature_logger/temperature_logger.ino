@@ -5,7 +5,7 @@
 // VCC	    5V
 // GND	    GND
 
-#include "max6675.h"
+#include "max6675.h"  // by Adafruit
 int thermoDO = 4;
 int thermoCS = 5;
 int thermoCLK = 6;
